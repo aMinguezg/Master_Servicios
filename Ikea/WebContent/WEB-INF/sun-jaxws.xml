@@ -1,6 +1,0 @@
-<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
-	<endpoint name="WebServiceImpl" implementation="ws.ikea.webservices.Productos" url-pattern="/soapws/productos" />
-	<endpoint name="WebServiceImpl" implementation="ws.ikea.webservices.Buscador" url-pattern="/soapws/buscador" />
-	<endpoint name="WebServiceImpl" implementation="ws.ikea.webservices.Almacen" url-pattern="/soapws/almacen" />
-	<endpoint name="WebServiceImpl" implementation="ws.ikea.webservices.Transporte" url-pattern="/soapws/transporte" />
-</endpoints>
