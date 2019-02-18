@@ -22,10 +22,20 @@ namespace WS.Rest.Peliculas.Controllers
 
         public IHttpActionResult Get()
         {
+            Pelicula pelicula = new Pelicula();
+            //Aqui hay que pasar el id de la base de datos
             dynamic result = Retorno("/es/film564615.html");
-            //Console.WriteLine(result.result.calificación);
-            //return Ok(JsonConvert.DeserializeObject(result));
-            return Ok(result["result"]["calificación"]);
+
+            //Se rellena el modelo pelicula
+            pelicula.Title = result["result"]["Título original"];
+            pelicula.Calificacion = result["result"]["calificación"];
+            pelicula.Duracion = result["result"]["Duración"];
+            pelicula.Year = result["result"]["Año"];
+            pelicula.Pais = result["result"]["País"];
+            pelicula.Reparto = result["result"]["Reparto"];
+            pelicula.Sinopsis = result["result"]["Sinopsis"];
+            return Ok(pelicula);
         }
+
     }
 }
