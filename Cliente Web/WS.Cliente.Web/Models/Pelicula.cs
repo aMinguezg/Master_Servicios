@@ -6,7 +6,7 @@ using System.Web;
 
 namespace WS.Rest.Peliculas.Models
 {
-    public class FindPelicula
+    public class Pelicula
     {
         public ObjectId Id { get; set; }
         public int IdContador { get; set; }

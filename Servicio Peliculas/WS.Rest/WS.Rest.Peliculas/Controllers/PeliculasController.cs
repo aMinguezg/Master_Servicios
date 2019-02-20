@@ -17,14 +17,20 @@ namespace WS.Rest.Peliculas.Controllers
             request.AddParameter("id", id);
             return client.Execute<dynamic>(request).Data;
         }
-
+        public IHttpActionResult Get()
+        {
+            IMongoDatabase database = client.GetDatabase("peliculasdb");
+            var collection = database.GetCollection<Pelicula>("film");
+            var results = collection.Find(x => x.IdContador >= 1).ToList();
+            return Ok(results);
+        }
         public IHttpActionResult Get(int id)
         {
-            Pelicula pelicula = new Pelicula();
+            InfoPelicula pelicula = new InfoPelicula();
             //Aqui hay que pasar el id a la base de datos
             IMongoDatabase database = client.GetDatabase("peliculasdb");
-            var collection = database.GetCollection<FindPelicula>("film");
-            var results = collection.Find(Builders<FindPelicula>.Filter.Eq("IdContador", id)).ToList();
+            var collection = database.GetCollection<Pelicula>("film");
+            var results = collection.Find(Builders<Pelicula>.Filter.Eq("IdContador", id)).ToList();
             dynamic result = Retorno(results[0].Url);
 
             //Se rellena el modelo pelicula
