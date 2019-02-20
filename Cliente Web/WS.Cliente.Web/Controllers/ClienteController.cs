@@ -16,8 +16,9 @@ namespace WS.Cliente.Web.Controllers
         public ActionResult Index()
         {
             var client = new RestClient("http://localhost:9090/api/Peliculas");
-            var request = new RestRequest("json",Method.GET);
-            request.RequestFormat = DataFormat.Json;
+            var request = new RestRequest(Method.GET);
+            //var request = new RestRequest("json",Method.GET);
+            //request.RequestFormat = DataFormat.Json;
             var result = client.Execute<Pelicula>(request).Data;
             Console.Write(result);
             return View(result);
