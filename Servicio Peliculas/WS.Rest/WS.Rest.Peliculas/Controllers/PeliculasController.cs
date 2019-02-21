@@ -21,7 +21,7 @@ namespace WS.Rest.Peliculas.Controllers
         {
             IMongoDatabase database = client.GetDatabase("peliculasdb");
             var collection = database.GetCollection<Pelicula>("film");
-            var results = collection.Find(x => x.IdContador >= 1).ToList();
+            dynamic results = collection.Find(x => x.IdContador >= 1).Project(x => x.Titulo).ToList();
             return Ok(results);
         }
         public IHttpActionResult Get(int id)
