@@ -27,7 +27,7 @@ namespace WS.Cliente.Consola
                 string respuesta = Console.ReadLine();
                     if (respuesta.Equals("no"))
                     {
-                    Console.Write("\r\nadiós!");
+                    Console.Write("\r\nAdiós!");
                     System.Threading.Thread.Sleep(1000);
                     extra = false;
                     }
