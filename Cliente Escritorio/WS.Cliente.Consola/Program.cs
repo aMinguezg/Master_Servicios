@@ -13,21 +13,37 @@ namespace WS.Cliente.Consola
     {
         static void Main(string[] args)
         {
-            Console.Write("Para obtener la url adecuada ir a: https://filmaffinity-api.mybluemix.net/ y usar la opción 'Try it out' en GET byTitle");
+            Console.Write("Para obtener la url adecuada ir a: https://filmaffinity-api.mybluemix.net/ y usar la opción 'Try it out' en GET byTitle\r\n");
             bool extra = true;
             while (extra)
             {
-                Console.Write("Título de la pelicula:");
+                Console.Write("\r\nTítulo de la película:");
                 string titulo = Console.ReadLine();
-                Console.Write("Url de la pelicula:");
+                Console.Write("Url de la película:");
                 string url = Console.ReadLine();
                 InsertarPeliculas(titulo, url);
-                Console.Write("¿Desea insertar otra pelicula? si - no: ");
+                Console.Write("Película insertada correctamente\r\n");
+                Console.Write("\r\n¿Desea insertar otra película? si - no: ");
                 string respuesta = Console.ReadLine();
-                if (respuesta.Equals("no"))
-                {
+                    if (respuesta.Equals("no"))
+                    {
+                    Console.Write("\r\nadiós!");
+                    System.Threading.Thread.Sleep(1000);
                     extra = false;
-                }
+                    }
+                    else
+                    {
+                        if(respuesta.Equals("si"))
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            Console.Write("\r\nEntrada no válida, adiós!");
+                            System.Threading.Thread.Sleep(2000);
+                            extra = false;
+                        }
+                    }
             }
           
         }
