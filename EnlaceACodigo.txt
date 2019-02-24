@@ -1,0 +1,7 @@
+El código ocupa más de 40mb, por lo que adjuntamos enlace de GitHub desde donde se puede descargar:
+
+ --> https://github.com/aMinguezg/Master_Servicios
+
+El ejecutable de la aplicación de escritorio está en:
+
+ --> Master_Servicios\Cliente Escritorio\WS.Cliente.Consola\bin\Debug - WS.Cliente.Consola.exe
