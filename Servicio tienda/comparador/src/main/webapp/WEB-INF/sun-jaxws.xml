@@ -1,3 +1,3 @@
 <endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
-	<endpoint name="WebServiceImpl" implementation="ws.miw.peliculas.webservices.ComparadorWS" url-pattern="/soapws/comparador" />
+	<endpoint name="WebServiceImpl" implementation="com.miw.peliculas.webservices.ComparadorWS" url-pattern="/soapws/comparador" />
 </endpoints>

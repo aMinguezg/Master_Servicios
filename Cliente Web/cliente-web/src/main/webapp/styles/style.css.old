@@ -1,0 +1,105 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Coiny');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+header {
+	background-image: url("../images/film.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 200px;
+}
+
+h1 {
+	text-align: center;
+	color: black;
+	letter-spacing: 3px;
+	margin: 10px;
+	font-family: 'Righteous', cursive;
+	font-size: 60px;
+}
+
+div {
+	text-align: center;
+	color: red;
+}
+
+.button {
+	display: inline-block;
+	padding: 15px 25px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: #4CAF50;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+	margin: 10px;
+}
+
+.compararButton {
+	position: absolute;
+	right: 150px;
+}
+
+.compararButton:hover {
+	background-color: #3e8e41
+}
+
+.compararButton:active {
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+ul {
+	list-style-type: none;
+	padding: 50px;
+	position: absolute;
+	right: 100px;
+	font-size: 24px;
+	letter-spacing: 3px;
+	width: 400px;
+}
+
+ul li {
+	margin: 20px;
+	font-family: 'Coiny', cursive;
+}
+
+#panel {
+	display:none;
+}
+
+
+.listaPrecios .amazon {
+	color:#c4a000;
+}
+
+.listaPrecios .carrefour {
+	color: blue;
+}
+
+.listaPrecios .alcampo {
+	color: orange;
+}
+
+.listaPrecios .tuvideoclub {
+	color: #800080
+}
+
+.listaPrecios .fnac {
+	color: Goldenrod;
+}
+
+.listaPrecios .mediamarkt {
+	color: Sienna;
+}
+
+
+
+
+
+
